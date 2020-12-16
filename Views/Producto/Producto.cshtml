@@ -1,0 +1,36 @@
+@model Producto
+
+<h1>Registro de solicitud de compra</h1>
+
+<form action="" method="post">
+    <div class="form-group">
+        <label asp-for="Nombre"></label>
+        <input type="text" asp-for="Nombre" class="form-group">
+        <small><strong><span asp-validation-for="Nombre" class="text-danger"></span></strong></small>
+    </div>
+    <div class="form-group">
+        <label asp-for="UrlFoto"></label>
+        <input type="text" asp-for="UrlFoto" class="form-group">
+        <small><strong><span asp-validation-for="UrlFoto" class="text-danger"></span></strong></small>
+    </div>
+    <div class="form-group">
+        <label asp-for="Descripcion"></label>
+        <input type="text" asp-for="Descripcion" class="form-group">
+        <small><strong><span asp-validation-for="Descripcion" class="text-danger"></span></strong></small>
+    </div>
+    <div class="form-group">
+        <label asp-for="Precio"></label>
+        <input asp-for="Precio" class="form-group">
+        <small><strong><span asp-validation-for="Precio" class="text-danger"></span></strong></small>
+    </div>
+    <div class="form-group">
+        <label asp-for="LugarCompra"></label>
+        <input type="text" asp-for="LugarCompra" class="form-group">
+        <small><strong><span asp-validation-for="LugarCompra" class="text-danger"></span></strong></small>
+    </div>
+    <div class="form-group">
+        <label asp-for="Usuario"></label>
+        <select asp-for="UsuarioId" asp-items="ViewBag.Usuarios" class="form-control"></select>
+    </div>
+    <button class="btn btn-primary">Registrar</button>
+</form>

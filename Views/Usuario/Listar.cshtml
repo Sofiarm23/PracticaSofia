@@ -1,0 +1,10 @@
+@model List<Usuario>;
+
+<h1>Listado de Usuarios</h1>
+
+<ul>
+    @foreach (var Usuario in Model)
+    {
+        <li>@Usuario.Nombre | @Usuario.Celular</li>
+    }
+</ul>

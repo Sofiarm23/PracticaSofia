@@ -1,0 +1,30 @@
+@model List<Producto>
+
+<h1>Listado de Productos</h1>
+
+<table class="table">
+    <tr>
+        <th>Nombre</th>
+        <th>UrlFoto</th>
+        <th>Descripcion</th>
+        <th>Precio</th>
+        <th>Lugar Compra</th>
+        <th>Nombre de Usuario</th>
+        <th>Celular de Usuario</th>
+    </tr>
+
+    @foreach (var producto in Model)
+    {
+    <tr>
+        <th>@producto.Nombre</th>
+        <th>@producto.UrlFoto</th>
+        <th>@producto.Descripcion</th>
+        <th>@producto.Precio</th>
+        <th>@producto.LugarCompra</th>
+        <th>@producto.Usuario.Nombre</th>
+        <th>@producto.Usuario.Celular</th>
+    </tr>
+    }
+
+
+</table>
